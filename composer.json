@@ -1,0 +1,23 @@
+{
+    "name": "corn-wand/corn-wand",
+    "description": "PHP functional library for generating HTML",
+    "keywords": ["html", "function", "functions", "functional"],
+    "homepage": "https://github.com/al-codepone/corn-wand",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ry Ferguson",
+            "role": "Developer",
+            "email": "rytf12@gmail.com",
+            "homepage": "http://ikitovagn.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "files": [
+            "src/corn-wand.php"
+        ]
+    }
+}
