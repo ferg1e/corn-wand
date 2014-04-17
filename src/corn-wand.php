@@ -59,3 +59,7 @@ function head() {
 function title() {
     return unpack_tag('title', func_get_args());
 }
+
+function body() {
+    return unpack_tag('body', func_get_args());
+}
