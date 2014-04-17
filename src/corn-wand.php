@@ -29,7 +29,7 @@ function tag($name) {
         ? attrs($args[1])
         : '';
 
-    $content = '';
+    $content = null;
 
     if(count($args) > 1 && !is_array($args[1])) {
         $content = implode(array_slice($args, 1));
@@ -38,7 +38,7 @@ function tag($name) {
         $content = implode(array_slice($args, 2));
     }
 
-    return ($content !== '')
+    return (!is_null($content))
         ? "<$name$attrs>$content</$name>"
         : "<$name$attrs/>";
 }
