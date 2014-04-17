@@ -55,3 +55,7 @@ function html() {
 function head() {
     return unpack_tag('head', func_get_args());
 }
+
+function title() {
+    return unpack_tag('title', func_get_args());
+}
