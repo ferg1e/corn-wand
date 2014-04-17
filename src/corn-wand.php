@@ -51,3 +51,7 @@ function unpack_tag($name, array $array) {
 function html() {
     return unpack_tag('html', func_get_args());
 }
+
+function head() {
+    return unpack_tag('head', func_get_args());
+}
