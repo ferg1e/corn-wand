@@ -42,3 +42,12 @@ function tag($name) {
         ? "<$name$attrs>$content</$name>"
         : "<$name$attrs/>";
 }
+
+function unpack_tag($name, array $array) {
+    array_unshift($array, $name);
+    return call_user_func_array('c\tag', $array);
+}
+
+function html() {
+    return unpack_tag('html', func_get_args());
+}
