@@ -64,6 +64,10 @@ function title() {
     return unpack_tag('title', func_get_args());
 }
 
+function link() {
+    return unpack_tag('link', func_get_args());
+}
+
 function body() {
     return unpack_tag('body', func_get_args());
 }
