@@ -52,10 +52,6 @@ function html() {
     return unpack_tag('html', func_get_args());
 }
 
-function html5() {
-    return '<!doctype html>' . unpack_tag('html', func_get_args());
-}
-
 function head() {
     return unpack_tag('head', func_get_args());
 }
@@ -78,6 +74,10 @@ function p() {
 
 function div() {
     return unpack_tag('div', func_get_args());
+}
+
+function html5() {
+    return '<!doctype html>' . unpack_tag('html', func_get_args());
 }
 
 function css($url) {
