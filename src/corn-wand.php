@@ -79,3 +79,9 @@ function p() {
 function div() {
     return unpack_tag('div', func_get_args());
 }
+
+function css($url) {
+    return link(array(
+        'rel' => 'stylesheet',
+        'href' => $url));
+}
