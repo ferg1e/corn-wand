@@ -75,3 +75,7 @@ function body() {
 function p() {
     return unpack_tag('p', func_get_args());
 }
+
+function div() {
+    return unpack_tag('div', func_get_args());
+}
