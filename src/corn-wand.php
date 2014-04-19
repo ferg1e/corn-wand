@@ -71,3 +71,7 @@ function link() {
 function body() {
     return unpack_tag('body', func_get_args());
 }
+
+function p() {
+    return unpack_tag('p', func_get_args());
+}
