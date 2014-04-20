@@ -68,6 +68,10 @@ function link() {
     return unpack_tag('link', func_get_args());
 }
 
+function meta() {
+    return unpack_tag('meta', func_get_args());
+}
+
 function body() {
     return unpack_tag('body', func_get_args());
 }
