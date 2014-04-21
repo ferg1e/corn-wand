@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @author Ry Ferguson
+ * @license MIT
+ */
+
 namespace c;
 
 function esc($string) {
