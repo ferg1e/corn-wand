@@ -7,6 +7,13 @@
 
 namespace c;
 
+/**
+ * Alias for htmlspecialchars()
+ *
+ * @param string $string string to escape
+ *
+ * @return string escaped string
+ */
 function esc($string) {
     return htmlspecialchars($string);
 }
