@@ -52,6 +52,23 @@ function attrs(array $attrs) {
     return ob_get_clean();
 }
 
+/**
+ * Get an HTML tag with attributes and
+ * content inside. If the second argument
+ * is an array then it will be used
+ * as the tag attributes. Otherwise all
+ * arguments besides the first are
+ * concatenated together to form the tag
+ * content. If there are no content arguments
+ * then the tag will self close.
+ *
+ * @param string $name tag name
+ * @param mixed $args,... unlimited optional
+ *     arguments for the tag attributes and
+ *     content
+ *
+ * @return string the HTML tag
+ */
 function tag($name) {
     $args = func_get_args();
     $attrs = (count($args) > 1 && is_array($args[1]))
