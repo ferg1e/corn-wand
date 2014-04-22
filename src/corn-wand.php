@@ -18,6 +18,23 @@ function esc($string) {
     return htmlspecialchars($string);
 }
 
+/**
+ * Convert an array into a string of HTML
+ * attributes. The array key is the attribute
+ * name and the array value is the attribute
+ * value. If the array key is an integer then
+ * only the value will show. Empty string values
+ * with an integer key are ignored. The attribute
+ * value is escaped. The attribute name is not
+ * escaped. Attribute values with a name are
+ * wrapped in double quotes. The return value
+ * always has a leading space if there's at
+ * least one attribute.
+ *
+ * @param array $attrs an array of attributes
+ *
+ * @return string attributes as a string
+ */
 function attrs(array $attrs) {
     ob_start();
 
