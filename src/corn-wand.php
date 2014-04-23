@@ -53,7 +53,7 @@ function attrs(array $attrs) {
 }
 
 /**
- * Get an HTML tag with attributes and
+ * Get any HTML tag with attributes and
  * content inside. If the second argument
  * is an array then it will be used
  * as the tag attributes. Otherwise all
@@ -105,6 +105,14 @@ function unpack_tag($name, array $array) {
     return call_user_func_array('c\tag', $array);
 }
 
+/**
+ * Get an <html> tag. Same as c\tag()
+ * but with name set to 'html'.
+ *
+ * @param mixed $args,... unlimited optional
+ *
+ * @return string <html> tag
+ */
 function html() {
     return unpack_tag('html', func_get_args());
 }
