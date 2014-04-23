@@ -67,7 +67,7 @@ function attrs(array $attrs) {
  *     arguments for the tag attributes and
  *     content
  *
- * @return string the HTML tag
+ * @return string complete tag
  */
 function tag($name) {
     $args = func_get_args();
@@ -89,6 +89,17 @@ function tag($name) {
         : "<$name$attrs/>";
 }
 
+/**
+ * Same as c\tag() but the unlimited
+ * optional arguments after the name
+ * argument are in an array.
+ *
+ * @param string $name tag name
+ * @param array $array the tag
+ *     attributes and content
+ *
+ * @return string complete tag
+ */
 function unpack_tag($name, array $array) {
     array_unshift($array, $name);
     return call_user_func_array('c\tag', $array);
