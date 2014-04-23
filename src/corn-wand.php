@@ -107,7 +107,7 @@ function unpack_tag($name, array $array) {
 
 /**
  * Get an <html> tag. Same as c\tag()
- * but with name set to 'html'.
+ * but with name already set to 'html'.
  *
  * @param mixed $args,... unlimited optional
  *
@@ -117,34 +117,98 @@ function html() {
     return unpack_tag('html', func_get_args());
 }
 
+/**
+ * Get a <head> tag. Same as c\tag()
+ * but with name already set to 'head'.
+ *
+ * @param mixed $args,... unlimited optional
+ *
+ * @return string <head> tag
+ */
 function head() {
     return unpack_tag('head', func_get_args());
 }
 
+/**
+ * Get a <title> tag. Same as c\tag()
+ * but with name already set to 'title'.
+ *
+ * @param mixed $args,... unlimited optional
+ *
+ * @return string <title> tag
+ */
 function title() {
     return unpack_tag('title', func_get_args());
 }
 
+/**
+ * Get a <base> tag. Same as c\tag()
+ * but with name already set to 'base'.
+ *
+ * @param mixed $args,... unlimited optional
+ *
+ * @return string <base> tag
+ */
 function base() {
     return unpack_tag('base', func_get_args());
 }
 
+/**
+ * Get a <link> tag. Same as c\tag()
+ * but with name already set to 'link'.
+ *
+ * @param mixed $args,... unlimited optional
+ *
+ * @return string <link> tag
+ */
 function link() {
     return unpack_tag('link', func_get_args());
 }
 
+/**
+ * Get a <meta> tag. Same as c\tag()
+ * but with name already set to 'meta'.
+ *
+ * @param mixed $args,... unlimited optional
+ *
+ * @return string <meta> tag
+ */
 function meta() {
     return unpack_tag('meta', func_get_args());
 }
 
+/**
+ * Get a <body> tag. Same as c\tag()
+ * but with name already set to 'body'.
+ *
+ * @param mixed $args,... unlimited optional
+ *
+ * @return string <body> tag
+ */
 function body() {
     return unpack_tag('body', func_get_args());
 }
 
+/**
+ * Get a <p> tag. Same as c\tag()
+ * but with name already set to 'p'.
+ *
+ * @param mixed $args,... unlimited optional
+ *
+ * @return string <p> tag
+ */
 function p() {
     return unpack_tag('p', func_get_args());
 }
 
+/**
+ * Get a <div> tag. Same as c\tag()
+ * but with name already set to 'div'.
+ *
+ * @param mixed $args,... unlimited optional
+ *
+ * @return string <div> tag
+ */
 function div() {
     return unpack_tag('div', func_get_args());
 }
