@@ -106,11 +106,8 @@ function unpack_tag($name, array $array) {
 }
 
 /**
- * Get an <html> tag. Same as c\tag()
- * but with name already set to 'html'.
- *
+ * Same as c\tag() but with name set to 'html'
  * @param mixed $args,... unlimited optional
- *
  * @return string <html> tag
  */
 function html() {
@@ -118,11 +115,8 @@ function html() {
 }
 
 /**
- * Get a <head> tag. Same as c\tag()
- * but with name already set to 'head'.
- *
+ * Same as c\tag() but with name set to 'head'
  * @param mixed $args,... unlimited optional
- *
  * @return string <head> tag
  */
 function head() {
@@ -130,11 +124,8 @@ function head() {
 }
 
 /**
- * Get a <title> tag. Same as c\tag()
- * but with name already set to 'title'.
- *
+ * Same as c\tag() but with name set to 'title'
  * @param mixed $args,... unlimited optional
- *
  * @return string <title> tag
  */
 function title() {
@@ -142,11 +133,8 @@ function title() {
 }
 
 /**
- * Get a <base> tag. Same as c\tag()
- * but with name already set to 'base'.
- *
+ * Same as c\tag() but with name set to 'base'
  * @param mixed $args,... unlimited optional
- *
  * @return string <base> tag
  */
 function base() {
@@ -154,11 +142,8 @@ function base() {
 }
 
 /**
- * Get a <link> tag. Same as c\tag()
- * but with name already set to 'link'.
- *
+ * Same as c\tag() but with name set to 'link'
  * @param mixed $args,... unlimited optional
- *
  * @return string <link> tag
  */
 function link() {
@@ -166,11 +151,8 @@ function link() {
 }
 
 /**
- * Get a <meta> tag. Same as c\tag()
- * but with name already set to 'meta'.
- *
+ * Same as c\tag() but with name set to 'meta'
  * @param mixed $args,... unlimited optional
- *
  * @return string <meta> tag
  */
 function meta() {
@@ -178,11 +160,8 @@ function meta() {
 }
 
 /**
- * Get a <body> tag. Same as c\tag()
- * but with name already set to 'body'.
- *
+ * Same as c\tag() but with name set to 'body'
  * @param mixed $args,... unlimited optional
- *
  * @return string <body> tag
  */
 function body() {
@@ -190,11 +169,8 @@ function body() {
 }
 
 /**
- * Get a <p> tag. Same as c\tag()
- * but with name already set to 'p'.
- *
+ * Same as c\tag() but with name set to 'p'
  * @param mixed $args,... unlimited optional
- *
  * @return string <p> tag
  */
 function p() {
@@ -202,11 +178,8 @@ function p() {
 }
 
 /**
- * Get a <div> tag. Same as c\tag()
- * but with name already set to 'div'.
- *
+ * Same as c\tag() but with name set to 'div'
  * @param mixed $args,... unlimited optional
- *
  * @return string <div> tag
  */
 function div() {
