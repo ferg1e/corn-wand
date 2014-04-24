@@ -160,6 +160,15 @@ function meta() {
 }
 
 /**
+ * Same as c\tag() but with name set to 'style'
+ * @param mixed $args,... unlimited optional
+ * @return string <style> tag
+ */
+function style() {
+    return unpack_tag('style', func_get_args());
+}
+
+/**
  * Same as c\tag() but with name set to 'body'
  * @param mixed $args,... unlimited optional
  * @return string <body> tag
