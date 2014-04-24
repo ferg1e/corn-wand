@@ -169,6 +169,15 @@ function style() {
 }
 
 /**
+ * Same as c\tag() but with name set to 'script'
+ * @param mixed $args,... unlimited optional
+ * @return string <script> tag
+ */
+function script() {
+    return unpack_tag('script', func_get_args());
+}
+
+/**
  * Same as c\tag() but with name set to 'body'
  * @param mixed $args,... unlimited optional
  * @return string <body> tag
