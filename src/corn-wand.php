@@ -178,6 +178,15 @@ function script() {
 }
 
 /**
+ * Same as c\tag() but with name set to 'noscript'
+ * @param mixed $args,... unlimited optional
+ * @return string <noscript> tag
+ */
+function noscript() {
+    return unpack_tag('noscript', func_get_args());
+}
+
+/**
  * Same as c\tag() but with name set to 'body'
  * @param mixed $args,... unlimited optional
  * @return string <body> tag
