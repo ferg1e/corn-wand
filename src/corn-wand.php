@@ -196,6 +196,60 @@ function body() {
 }
 
 /**
+ * Same as c\tag() but with name set to 'h1'
+ * @param mixed $args,... unlimited optional
+ * @return string <h1> tag
+ */
+function h1() {
+    return unpack_tag('h1', func_get_args());
+}
+
+/**
+ * Same as c\tag() but with name set to 'h2'
+ * @param mixed $args,... unlimited optional
+ * @return string <h2> tag
+ */
+function h2() {
+    return unpack_tag('h2', func_get_args());
+}
+
+/**
+ * Same as c\tag() but with name set to 'h3'
+ * @param mixed $args,... unlimited optional
+ * @return string <h3> tag
+ */
+function h3() {
+    return unpack_tag('h3', func_get_args());
+}
+
+/**
+ * Same as c\tag() but with name set to 'h4'
+ * @param mixed $args,... unlimited optional
+ * @return string <h4> tag
+ */
+function h4() {
+    return unpack_tag('h4', func_get_args());
+}
+
+/**
+ * Same as c\tag() but with name set to 'h5'
+ * @param mixed $args,... unlimited optional
+ * @return string <h5> tag
+ */
+function h5() {
+    return unpack_tag('h5', func_get_args());
+}
+
+/**
+ * Same as c\tag() but with name set to 'h6'
+ * @param mixed $args,... unlimited optional
+ * @return string <h6> tag
+ */
+function h6() {
+    return unpack_tag('h6', func_get_args());
+}
+
+/**
  * Same as c\tag() but with name set to 'p'
  * @param mixed $args,... unlimited optional
  * @return string <p> tag
