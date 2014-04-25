@@ -277,6 +277,15 @@ function pre() {
 }
 
 /**
+ * Same as c\tag() but with name set to 'blockquote'
+ * @param mixed $args,... unlimited optional
+ * @return string <blockquote> tag
+ */
+function blockquote() {
+    return unpack_tag('blockquote', func_get_args());
+}
+
+/**
  * Same as c\tag() but with name set to 'div'
  * @param mixed $args,... unlimited optional
  * @return string <div> tag
