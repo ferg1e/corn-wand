@@ -268,6 +268,15 @@ function hr() {
 }
 
 /**
+ * Same as c\tag() but with name set to 'pre'
+ * @param mixed $args,... unlimited optional
+ * @return string <pre> tag
+ */
+function pre() {
+    return unpack_tag('pre', func_get_args());
+}
+
+/**
  * Same as c\tag() but with name set to 'div'
  * @param mixed $args,... unlimited optional
  * @return string <div> tag
