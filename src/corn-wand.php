@@ -259,6 +259,15 @@ function p() {
 }
 
 /**
+ * Same as c\tag() but with name set to 'hr'
+ * @param mixed $args,... unlimited optional
+ * @return string <hr> tag
+ */
+function hr() {
+    return unpack_tag('hr', func_get_args());
+}
+
+/**
  * Same as c\tag() but with name set to 'div'
  * @param mixed $args,... unlimited optional
  * @return string <div> tag
