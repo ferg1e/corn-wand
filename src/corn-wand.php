@@ -313,6 +313,33 @@ function li() {
 }
 
 /**
+ * Same as c\tag() but with name set to 'dl'
+ * @param mixed $args,... unlimited optional
+ * @return string <dl> tag
+ */
+function dl() {
+    return unpack_tag('dl', func_get_args());
+}
+
+/**
+ * Same as c\tag() but with name set to 'dt'
+ * @param mixed $args,... unlimited optional
+ * @return string <dt> tag
+ */
+function dt() {
+    return unpack_tag('dt', func_get_args());
+}
+
+/**
+ * Same as c\tag() but with name set to 'dd'
+ * @param mixed $args,... unlimited optional
+ * @return string <dd> tag
+ */
+function dd() {
+    return unpack_tag('dd', func_get_args());
+}
+
+/**
  * Same as c\tag() but with name set to 'div'
  * @param mixed $args,... unlimited optional
  * @return string <div> tag
