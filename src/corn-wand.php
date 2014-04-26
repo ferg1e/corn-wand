@@ -348,6 +348,15 @@ function div() {
     return unpack_tag('div', func_get_args());
 }
 
+/**
+ * Same as c\tag() but with name set to 'a'
+ * @param mixed $args,... unlimited optional
+ * @return string <a> tag
+ */
+function a() {
+    return unpack_tag('a', func_get_args());
+}
+
 function html5() {
     return '<!doctype html>' . unpack_tag('html', func_get_args());
 }
