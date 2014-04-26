@@ -286,6 +286,33 @@ function blockquote() {
 }
 
 /**
+ * Same as c\tag() but with name set to 'ol'
+ * @param mixed $args,... unlimited optional
+ * @return string <ol> tag
+ */
+function ol() {
+    return unpack_tag('ol', func_get_args());
+}
+
+/**
+ * Same as c\tag() but with name set to 'ul'
+ * @param mixed $args,... unlimited optional
+ * @return string <ul> tag
+ */
+function ul() {
+    return unpack_tag('ul', func_get_args());
+}
+
+/**
+ * Same as c\tag() but with name set to 'li'
+ * @param mixed $args,... unlimited optional
+ * @return string <li> tag
+ */
+function li() {
+    return unpack_tag('li', func_get_args());
+}
+
+/**
  * Same as c\tag() but with name set to 'div'
  * @param mixed $args,... unlimited optional
  * @return string <div> tag
