@@ -357,6 +357,15 @@ function a() {
     return unpack_tag('a', func_get_args());
 }
 
+/**
+ * Same as c\tag() but with name set to 'em'
+ * @param mixed $args,... unlimited optional
+ * @return string <em> tag
+ */
+function em() {
+    return unpack_tag('em', func_get_args());
+}
+
 function html5() {
     return '<!doctype html>' . unpack_tag('html', func_get_args());
 }
