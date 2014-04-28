@@ -366,6 +366,15 @@ function em() {
     return unpack_tag('em', func_get_args());
 }
 
+/**
+ * Same as c\tag() but with name set to 'strong'
+ * @param mixed $args,... unlimited optional
+ * @return string <strong> tag
+ */
+function strong() {
+    return unpack_tag('strong', func_get_args());
+}
+
 function html5() {
     return '<!doctype html>' . unpack_tag('html', func_get_args());
 }
