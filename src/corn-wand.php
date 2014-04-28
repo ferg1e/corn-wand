@@ -375,6 +375,15 @@ function strong() {
     return unpack_tag('strong', func_get_args());
 }
 
+/**
+ * Same as c\tag() but with name set to 'small'
+ * @param mixed $args,... unlimited optional
+ * @return string <small> tag
+ */
+function small() {
+    return unpack_tag('small', func_get_args());
+}
+
 function html5() {
     return '<!doctype html>' . unpack_tag('html', func_get_args());
 }
