@@ -694,3 +694,22 @@ function css($url) {
         'rel' => 'stylesheet',
         'href' => $url));
 }
+
+function linput(
+    $label,
+    array $inputAttrs = array(),
+    array $labelAttrs = array())
+{
+    if($id = $inputAttrs['id']) {
+        $inputAttrs['name'] = $inputAttrs['name']
+            ? $inputAttrs['name']
+            : $id;
+
+        $labelAttrs['id'] = "l_$id";
+        $labelAttrs['for'] = $id;
+    }
+
+    return
+        label($labelAttrs, $label)
+        . input($inputAttrs);
+}
