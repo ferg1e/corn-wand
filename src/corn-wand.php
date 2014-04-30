@@ -728,3 +728,19 @@ function dlinput(
         linput($label, $inputAttrs, $labelAttrs));
             
 }
+
+function ltextarea(
+    $label,
+    array $textareaAttrs = array(),
+    $content = '',
+    array $labelAttrs = array())
+{
+    if($id = $textareaAttrs['id']) {
+        $textareaAttrs['name'] = $id;
+        $labelAttrs['id'] = "l_$id";
+        $labelAttrs['for'] = $id;
+    }
+
+    return label($labelAttrs, $label)
+        . textarea($textareaAttrs, esc($content));
+}
