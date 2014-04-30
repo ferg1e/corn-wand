@@ -744,3 +744,23 @@ function ltextarea(
     return label($labelAttrs, $label)
         . textarea($textareaAttrs, esc($content));
 }
+
+function dltextarea(
+    $label,
+    array $textareaAttrs = array(),
+    $content = '',
+    array $labelAttrs = array(),
+    array $divAttrs = array())
+{
+    if($id = $textareaAttrs['id']) {
+        $divAttrs['id'] = "c_$id";
+    }
+
+    return div(
+        $divAttrs,
+        ltextarea(
+            $label,
+            $textareaAttrs,
+            $content,
+            $labelAttrs));
+}
