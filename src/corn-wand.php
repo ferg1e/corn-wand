@@ -709,7 +709,22 @@ function linput(
         $labelAttrs['for'] = $id;
     }
 
-    return
-        label($labelAttrs, $label)
+    return label($labelAttrs, $label)
         . input($inputAttrs);
+}
+
+function dlinput(
+    $label,
+    array $inputAttrs = array(),
+    array $labelAttrs = array(),
+    array $divAttrs = array())
+{
+    if($id = $inputAttrs['id']) {
+        $divAttrs['id'] = "c_$id";
+    }
+
+    return div(
+        $divAttrs,
+        linput($label, $inputAttrs, $labelAttrs));
+            
 }
