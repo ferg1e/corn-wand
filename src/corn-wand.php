@@ -764,3 +764,33 @@ function dltextarea(
             $content,
             $labelAttrs));
 }
+
+function soption(
+    array $options,
+    array $selectAttrs = array(),
+    $selectedValues = array())
+{
+    $isMultiple = in_array('multiple', $selectAttrs);
+
+    if($isMultiple) {
+        $selectAttrs['name'] = $selectAttrs['name'] . '[]';
+    }
+
+    $optionTags = array();
+
+    foreach($options as $value => $content) {
+        $isSelected =
+            ($isMultiple && in_array($value, $selectedValues))
+            || $value == $selectedValues;
+
+        $optionTags[] = option(
+            array(
+                'value' => $value,
+                $isSelected ? 'selected' : ''),
+            esc($content));
+    }
+
+    return select(
+        $selectAttrs,
+        implode($optionTags));
+}
