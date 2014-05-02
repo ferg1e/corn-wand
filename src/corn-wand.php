@@ -794,3 +794,20 @@ function soption(
         $selectAttrs,
         implode($optionTags));
 }
+
+function lsoption(
+    $label,
+    array $options,
+    array $selectAttrs = array(),
+    $selectedValues = array(),
+    array $labelAttrs = array())
+{
+    if($id = $selectAttrs['id']) {
+        $selectAttrs['name'] = $id;
+        $labelAttrs['id'] = "l_$id";
+        $labelAttrs['for'] = $id;
+    }
+
+    return label($labelAttrs, $label)
+        . soption($options, $selectAttrs, $selectedValues);
+}
