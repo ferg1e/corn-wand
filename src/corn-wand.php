@@ -689,10 +689,16 @@ function html5() {
     return '<!doctype html>' . unpack_tag('html', func_get_args());
 }
 
-function css($url) {
-    return link(array(
-        'rel' => 'stylesheet',
-        'href' => $url));
+function css() {
+    ob_start();
+
+    foreach(func_get_args() as $url) {
+        print link(array(
+            'rel' => 'stylesheet',
+            'href' => $url));
+    }
+
+    return ob_get_clean();
 }
 
 function linput(
