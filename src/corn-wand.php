@@ -685,6 +685,10 @@ function wbr() {
     return unpack_tag('wbr', func_get_args());
 }
 
+/**
+ * @see c\html() same but with HTML5 doctype
+ * prepended.
+ */
 function html5() {
     return '<!doctype html>' . unpack_tag('html', func_get_args());
 }
