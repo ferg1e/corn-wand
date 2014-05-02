@@ -693,6 +693,16 @@ function html5() {
     return '<!doctype html>' . unpack_tag('html', func_get_args());
 }
 
+/**
+ * Get one or more link tags for CSS
+ * files.
+ *
+ * @param string $args,... unlimited. Use at
+ * least one. The URLs of CSS files.
+ *
+ * @return string the link tags for each
+ * CSS URL
+ */
 function css() {
     ob_start();
 
