@@ -715,6 +715,26 @@ function css() {
     return ob_get_clean();
 }
 
+/**
+ * Get a string that is a label tag and an input
+ * tag.
+ *
+ * @param string $label the content for the label
+ *     tag. This value is not escaped.
+ * @param array $inputAttrs the attributes for the
+ *     input tag. These attributes will render like
+ *     in c\attrs(). If the 'id' key is set then the
+ *     following attributes will be set automatically:
+ *     the input 'name' will be $id only if 'name'
+ *     doesn't already exist; the label 'id' will be
+ *     "l_$id" and the label 'for' will be $id.
+ * @param array $labelAttrs the attributes for the
+ *     label tag. These attributes will render like
+ *     in c\attrs().
+ *
+ * @return string string that is a label tag and an
+ *     input tag
+ */
 function linput(
     $label,
     array $inputAttrs = array(),
