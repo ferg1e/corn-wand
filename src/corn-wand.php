@@ -721,14 +721,14 @@ function css() {
  *
  * @param string $label the content for the label
  *     tag. This value is not escaped.
- * @param array $inputAttrs the attributes for the
+ * @param array $input_attrs the attributes for the
  *     input tag. These attributes will render like
  *     in c\attrs(). If the 'id' key is set then the
  *     following attributes will be set automatically:
  *     the input 'name' will be $id only if 'name'
  *     doesn't already exist; the label 'id' will be
  *     "l_$id" and the label 'for' will be $id.
- * @param array $labelAttrs the attributes for the
+ * @param array $label_attrs the attributes for the
  *     label tag. These attributes will render like
  *     in c\attrs().
  *
@@ -737,117 +737,117 @@ function css() {
  */
 function linput(
     $label,
-    array $inputAttrs = array(),
-    array $labelAttrs = array())
+    array $input_attrs = array(),
+    array $label_attrs = array())
 {
-    if($id = $inputAttrs['id']) {
-        $inputAttrs['name'] = $inputAttrs['name']
-            ? $inputAttrs['name']
+    if($id = $input_attrs['id']) {
+        $input_attrs['name'] = $input_attrs['name']
+            ? $input_attrs['name']
             : $id;
 
-        $labelAttrs['id'] = "l_$id";
-        $labelAttrs['for'] = $id;
+        $label_attrs['id'] = "l_$id";
+        $label_attrs['for'] = $id;
     }
 
-    return label($labelAttrs, $label)
-        . input($inputAttrs);
+    return label($label_attrs, $label)
+        . input($input_attrs);
 }
 
 function dlinput(
     $label,
-    array $inputAttrs = array(),
-    array $labelAttrs = array(),
-    array $divAttrs = array())
+    array $input_attrs = array(),
+    array $label_attrs = array(),
+    array $div_attrs = array())
 {
-    if($id = $inputAttrs['id']) {
-        $divAttrs['id'] = "c_$id";
+    if($id = $input_attrs['id']) {
+        $div_attrs['id'] = "c_$id";
     }
 
     return div(
-        $divAttrs,
-        linput($label, $inputAttrs, $labelAttrs));
+        $div_attrs,
+        linput($label, $input_attrs, $label_attrs));
             
 }
 
 function ltextarea(
     $label,
-    array $textareaAttrs = array(),
+    array $textarea_attrs = array(),
     $content = '',
-    array $labelAttrs = array())
+    array $label_attrs = array())
 {
-    if($id = $textareaAttrs['id']) {
-        $textareaAttrs['name'] = $id;
-        $labelAttrs['id'] = "l_$id";
-        $labelAttrs['for'] = $id;
+    if($id = $textarea_attrs['id']) {
+        $textarea_attrs['name'] = $id;
+        $label_attrs['id'] = "l_$id";
+        $label_attrs['for'] = $id;
     }
 
-    return label($labelAttrs, $label)
-        . textarea($textareaAttrs, esc($content));
+    return label($label_attrs, $label)
+        . textarea($textarea_attrs, esc($content));
 }
 
 function dltextarea(
     $label,
-    array $textareaAttrs = array(),
+    array $textarea_attrs = array(),
     $content = '',
-    array $labelAttrs = array(),
-    array $divAttrs = array())
+    array $label_attrs = array(),
+    array $div_attrs = array())
 {
-    if($id = $textareaAttrs['id']) {
-        $divAttrs['id'] = "c_$id";
+    if($id = $textarea_attrs['id']) {
+        $div_attrs['id'] = "c_$id";
     }
 
     return div(
-        $divAttrs,
+        $div_attrs,
         ltextarea(
             $label,
-            $textareaAttrs,
+            $textarea_attrs,
             $content,
-            $labelAttrs));
+            $label_attrs));
 }
 
 function soption(
     array $options,
-    array $selectAttrs = array(),
-    $selectedValues = array())
+    array $select_attrs = array(),
+    $selected_values = array())
 {
-    $isMultiple = in_array('multiple', $selectAttrs);
+    $is_multiple = in_array('multiple', $select_attrs);
 
-    if($isMultiple) {
-        $selectAttrs['name'] = $selectAttrs['name'] . '[]';
+    if($is_multiple) {
+        $select_attrs['name'] = $select_attrs['name'] . '[]';
     }
 
-    $optionTags = array();
+    $option_tags = array();
 
     foreach($options as $value => $content) {
-        $isSelected =
-            ($isMultiple && in_array($value, $selectedValues))
-            || $value == $selectedValues;
+        $is_selected =
+            ($is_multiple && in_array($value, $selected_values))
+            || $value == $selected_values;
 
-        $optionTags[] = option(
+        $option_tags[] = option(
             array(
                 'value' => $value,
-                $isSelected ? 'selected' : ''),
+                $is_selected ? 'selected' : ''),
             esc($content));
     }
 
     return select(
-        $selectAttrs,
-        implode($optionTags));
+        $select_attrs,
+        implode($option_tags));
 }
 
 function lsoption(
     $label,
     array $options,
-    array $selectAttrs = array(),
-    $selectedValues = array(),
-    array $labelAttrs = array())
+    array $select_attrs = array(),
+    $selected_values = array(),
+    array $label_attrs = array())
 {
-    if($id = $selectAttrs['id']) {
-        $selectAttrs['name'] = $id;
-        $labelAttrs['id'] = "l_$id";
-        $labelAttrs['for'] = $id;
+    if($id = $select_attrs['id']) {
+        $select_attrs['name'] = $id;
+        $label_attrs['id'] = "l_$id";
+        $label_attrs['for'] = $id;
     }
 
-    return label($labelAttrs, $label)
-        . soption($options, $selectAttrs, $selectedValues);
+    return label($label_attrs, $label)
+        . soption($options, $select_attrs, $selected_values);
 }
