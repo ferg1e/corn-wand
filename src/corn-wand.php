@@ -845,3 +845,25 @@ function ldrop_down(
     return label($label_attrs, $label)
         . drop_down($options, $select_attrs, $selected_values);
 }
+
+function dldrop_down(
+    $label,
+    array $options,
+    array $select_attrs = array(),
+    $selected_values = array(),
+    array $label_attrs = array(),
+    array $div_attrs = array())
+{
+    if($id = $select_attrs['id']) {
+        $div_attrs['id'] = "c_$id";
+    }
+
+    return div(
+        $div_attrs,
+        ldrop_down(
+            $label,
+            $options,
+            $select_attrs,
+            $selected_values,
+            $label_attrs));
+}
