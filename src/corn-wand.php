@@ -805,7 +805,7 @@ function dltextarea(
             $label_attrs));
 }
 
-function soption(
+function drop_down(
     array $options,
     array $select_attrs = array(),
     $selected_values = array())
@@ -835,7 +835,7 @@ function soption(
         implode($option_tags));
 }
 
-function lsoption(
+function ldrop_down(
     $label,
     array $options,
     array $select_attrs = array(),
@@ -849,5 +849,5 @@ function lsoption(
     }
 
     return label($label_attrs, $label)
-        . soption($options, $select_attrs, $selected_values);
+        . drop_down($options, $select_attrs, $selected_values);
 }

@@ -5,12 +5,12 @@ require '../src/corn-wand.php';
 echo 
     c\html5(
         c\body(
-            c\soption(
+            c\drop_down(
                 array(
                     'zero',
                     'one',
                     'two')),
-            c\soption(
+            c\drop_down(
                 array(
                     'g' => 'gold',
                     's' => '"silver"',
@@ -18,7 +18,7 @@ echo
                 array(
                     'name' => 'medal',
                     'multiple')),
-            c\soption(
+            c\drop_down(
                 array(
                     'past',
                     'present',

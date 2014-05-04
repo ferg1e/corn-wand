@@ -5,14 +5,14 @@ require '../src/corn-wand.php';
 echo 
     c\html5(
         c\body(
-            c\lsoption(
+            c\ldrop_down(
                 'Cities',
                 array(
                     'Barcelona',
                     'Horta',
                     'Madrid')),
 
-            c\lsoption(
+            c\ldrop_down(
                 'Movies',
                 array(
                     'Fargo',
@@ -22,7 +22,7 @@ echo
                 array(
                     'id' => 'movie')),
 
-            c\lsoption(
+            c\ldrop_down(
                 'Hellos',
                 array(
                     1 => 'Hi',
@@ -34,7 +34,7 @@ echo
                     'multiple'),
                 array(1, 4)),
 
-            c\lsoption(
+            c\ldrop_down(
                 'Types',
                 array(
                     's' => 'small',
