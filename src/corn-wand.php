@@ -11,7 +11,6 @@ namespace c;
  * Alias for htmlspecialchars()
  *
  * @param string $string string to escape
- *
  * @return string escaped string
  */
 function esc($string) {
@@ -32,7 +31,6 @@ function esc($string) {
  * least one attribute.
  *
  * @param array $attrs an array of attributes
- *
  * @return string attributes as a string
  */
 function attrs(array $attrs) {
@@ -66,7 +64,6 @@ function attrs(array $attrs) {
  * @param mixed $args,... unlimited optional
  *     arguments for the tag attributes and
  *     content
- *
  * @return string complete tag
  */
 function tag($name) {
@@ -97,7 +94,6 @@ function tag($name) {
  * @param string $name tag name
  * @param array $array the tag
  *     attributes and content
- *
  * @return string complete tag
  */
 function unpack_tag($name, array $array) {
@@ -694,14 +690,13 @@ function html5() {
 }
 
 /**
- * Get one or more link tags for CSS
+ * Get a string that is link tags for CSS
  * files.
  *
  * @param string $args,... unlimited. Use at
- * least one. The URLs of CSS files.
- *
+ *     least one. The URLs of CSS files.
  * @return string the link tags for each
- * CSS URL
+ *     CSS file
  */
 function css() {
     ob_start();
@@ -731,7 +726,6 @@ function css() {
  * @param array $label_attrs the attributes for the
  *     label tag. These attributes will render like
  *     in c\attrs().
- *
  * @return string string that is a label tag and an
  *     input tag
  */
