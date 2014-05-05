@@ -889,3 +889,20 @@ function checkboxes(
 
     return ob_get_clean();
 }
+
+function scheckboxes(
+    $title,
+    $name,
+    array $checkboxes,
+    array $checked_values = array())
+{
+    return
+        span(
+            array('id' => "t_$name"),
+            $title)
+
+        . checkboxes(
+            $name,
+            $checkboxes,
+            $checked_values);
+}
