@@ -867,3 +867,25 @@ function dldrop_down(
             $selected_values,
             $label_attrs));
 }
+
+function checkboxes(
+    $name,
+    array $checkboxes,
+    array $checked_values = array())
+{
+    $i = 0;
+    ob_start();
+
+    foreach($checkboxes as $value => $label) {
+        print dlinput(
+            $label,
+            array(
+                'id' => $name . $i++,
+                'name' => $name . '[]',
+                'type' => 'checkbox',
+                'value' => $value,
+                in_array($value, $checked_values) ? 'checked' : ''));
+    }
+
+    return ob_get_clean();
+}
