@@ -1,0 +1,14 @@
+#c_clubs, #c_shapes, #c_tapes {
+    margin-bottom:1.7em;
+}
+
+#c_clubs div {
+    unicode-bidi:embed;
+    direction:rtl;
+    text-align:left;
+}
+
+#c_clubs div * {
+    unicode-bidi:embed;
+    direction:ltr;
+}

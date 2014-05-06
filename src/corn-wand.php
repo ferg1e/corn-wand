@@ -906,3 +906,20 @@ function scheckboxes(
             $checkboxes,
             $checked_values);
 }
+
+function dscheckboxes(
+    $title,
+    $name,
+    array $checkboxes,
+    array $checked_values = array(),
+    array $div_attrs = array())
+{
+    $div_attrs['id'] = "c_$name";
+    return div(
+        $div_attrs,
+        scheckboxes(
+            $title,
+            $name,
+            $checkboxes,
+            $checked_values));
+}
