@@ -726,8 +726,7 @@ function css() {
  * @param array $label_attrs the attributes for the
  *     label tag. These attributes will render like
  *     in c\attrs().
- * @return string string that is a label tag and an
- *     input tag
+ * @return string a label tag and an input tag
  */
 function linput(
     $label,
@@ -747,6 +746,21 @@ function linput(
         . input($input_attrs);
 }
 
+/**
+ * Get a string that is a div containing a label
+ * tag and an input tag.
+ *
+ * @param string $label same as in c\linput()
+ * @param array $input_attrs same as in c\linput().
+ *     Additionally if the 'id' key is set then the
+ *     div 'id' attribute will be "l_$id".
+ * @param array $label_attrs same as in c\linput()
+ * @param array $div_attrs the attributes for the
+ *     div tag. These attributes will render like
+ *     in c\attrs().
+ * @return string div containing a label tag and an
+ *     input tag
+ */
 function dlinput(
     $label,
     array $input_attrs = array(),
