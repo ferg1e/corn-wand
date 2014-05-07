@@ -711,6 +711,27 @@ function css() {
 }
 
 /**
+ * Get a string that is script tags for 
+ * JavaScript files.
+ *
+ * @param string $args,... unlimited. Use at
+ *     least one. The URLs of JavaScript files.
+ * @return string the script tags for each
+ *     JavaScript file
+ */
+function js() {
+    ob_start();
+
+    foreach(func_get_args() as $url) {
+        print script(
+            array('src' => $url),
+            '');
+    }
+
+    return ob_get_clean();
+}
+
+/**
  * Get a string that is a label tag and an input
  * tag.
  *
