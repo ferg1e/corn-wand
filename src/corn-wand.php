@@ -798,6 +798,26 @@ function dlinput(
             
 }
 
+/**
+ * Get a string that is a label tag and a textarea
+ * tag.
+ *
+ * @param string $label the content for the label
+ *     tag. This value is not escaped.
+ * @param array $textarea_attrs the attributes for
+ *     the textarea tag. These attributes render like
+ *     in c\attrs(). If the 'id' key is set then the
+ *     following attributes will be set automatically:
+ *     the textarea 'name' will be $id; the label
+ *     'id' will be "l_$id" and the label 'for' will
+ *     be $id.
+ * @param string $content the content for the textarea
+ *     tag. This value is escaped.
+ * @param array $label_attrs the attributes for the
+ *     label tag. These attributes render like in
+ *     c\attrs().
+ * @return string a label tag and a textarea tag
+ */
 function ltextarea(
     $label,
     array $textarea_attrs = array(),
