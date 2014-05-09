@@ -774,7 +774,7 @@ function linput(
  * @param string $label same as in c\linput()
  * @param array $input_attrs same as in c\linput().
  *     Additionally if the 'id' key is set then the
- *     div 'id' attribute will be "l_$id".
+ *     div 'id' attribute will be "c_$id".
  * @param array $label_attrs same as in c\linput()
  * @param array $div_attrs the attributes for the
  *     div tag. These attributes will render like
@@ -834,6 +834,23 @@ function ltextarea(
         . textarea($textarea_attrs, esc($content));
 }
 
+/**
+ * Get a string that is a div containing a label
+ * tag and a textarea tag.
+ *
+ * @param string $label same as in c\ltextarea()
+ * @param array $textarea_attrs same as in
+ *     c\ltextarea(). Additionally if the 'id' key
+ *     is set then the div 'id' attribute will be
+ *     "c_$id".
+ * @param string $content same as in c\ltextarea()
+ * @param array $label_attrs same as in c\ltextarea()
+ * @param array $div_attrs the attributes for the
+ *     div tag. These attributes render like in
+ *     c\attrs().
+ * @return string div containing a label tag and a
+ *     textarea tag
+ */
 function dltextarea(
     $label,
     array $textarea_attrs = array(),
