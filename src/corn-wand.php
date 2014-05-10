@@ -738,15 +738,15 @@ function js() {
  * @param string $label the content for the label
  *     tag. This value is not escaped.
  * @param array $input_attrs the attributes for the
- *     input tag. These attributes will render like
- *     in c\attrs(). If the 'id' key is set then the
+ *     input tag. These attributes render like in
+ *     c\attrs(). If the 'id' key is set then the
  *     following attributes will be set automatically:
  *     the input 'name' will be $id only if 'name'
- *     doesn't already exist; the label 'id' will be
+ *     isn't already set; the label 'id' will be
  *     "l_$id" and the label 'for' will be $id.
  * @param array $label_attrs the attributes for the
- *     label tag. These attributes will render like
- *     in c\attrs().
+ *     label tag. These attributes render like in
+ *     c\attrs().
  * @return string a label tag and an input tag
  */
 function linput(
@@ -771,14 +771,22 @@ function linput(
  * Get a string that is a div containing a label
  * tag and an input tag.
  *
- * @param string $label same as in c\linput()
- * @param array $input_attrs same as in c\linput().
- *     Additionally if the 'id' key is set then the
- *     div 'id' attribute will be "c_$id".
- * @param array $label_attrs same as in c\linput()
+ * @param string $label the content for the label
+ *     tag. This value is not escaped.
+ * @param array $input_attrs the attributes for the
+ *     input tag. These attributes render like in
+ *     c\attrs(). If the 'id' key is set then the
+ *     following attributes will be set automatically:
+ *     the input 'name' will be $id only if 'name'
+ *     isn't already set; the label 'id' will be
+ *     "l_$id"; the label 'for' will be $id and the
+ *     div 'id' will be "c_$id".
+ * @param array $label_attrs the attributes for the
+ *     label tag. These attributes render like in
+ *     c\attrs().
  * @param array $div_attrs the attributes for the
- *     div tag. These attributes will render like
- *     in c\attrs().
+ *     div tag. These attributes render like in
+ *     c\attrs().
  * @return string div containing a label tag and an
  *     input tag
  */
@@ -838,13 +846,20 @@ function ltextarea(
  * Get a string that is a div containing a label
  * tag and a textarea tag.
  *
- * @param string $label same as in c\ltextarea()
- * @param array $textarea_attrs same as in
- *     c\ltextarea(). Additionally if the 'id' key
- *     is set then the div 'id' attribute will be
- *     "c_$id".
- * @param string $content same as in c\ltextarea()
- * @param array $label_attrs same as in c\ltextarea()
+ * @param string $label the content for the label
+ *     tag. This value is not escaped.
+ * @param array $textarea_attrs the attributes for
+ *     the textarea tag. These attributes render like
+ *     in c\attrs(). If the 'id' key is set then the
+ *     following attributes will be set automatically:
+ *     the textarea 'name' will be $id; the label
+ *     'id' will be "l_$id"; the label 'for' will
+ *     be $id and the div 'id' will be "c_$id".
+ * @param string $content the content for the textarea
+ *     tag. This value is escaped.
+ * @param array $label_attrs the attributes for the
+ *     label tag. These attributes render like in
+ *     c\attrs().
  * @param array $div_attrs the attributes for the
  *     div tag. These attributes render like in
  *     c\attrs().
