@@ -722,15 +722,23 @@ function css() {
  * Get a string that is script tags for 
  * JavaScript files.
  *
- * @param string $args,... unlimited. Use at
- *     least one. The URLs of JavaScript files.
+ * @param mixed $args,... unlimited. If
+ *     the first argument is an array, then
+ *     all the JavaScript URLs are that
+ *     array. Otherwise all the JavaScript
+ *     URLs are the function arguments.
  * @return string the script tags for each
  *     JavaScript file
  */
 function js() {
+    $args = func_get_args();
+    $urls = (count($args) > 0 && is_array($args[0]))
+        ? $args[0]
+        : $args;
+
     ob_start();
 
-    foreach(func_get_args() as $url) {
+    foreach($urls as $url) {
         print script(
             array('src' => $url),
             '');
