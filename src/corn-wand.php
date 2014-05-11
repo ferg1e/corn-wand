@@ -902,6 +902,32 @@ function dltextarea(
             $label_attrs));
 }
 
+/**
+ * Get a string that is a select tag containing
+ * option tags. You cannot set option tag attributes
+ * using this function. However, the option tag value
+ * attribute and selected value will be set for you.
+ * This function will handle single select and
+ * multi-select.
+ *
+ * @param array $options each element in this array
+ *     is an option tag. The array key is the option
+ *     value and the array value is the option tag
+ *     content(this content value is escaped).
+ * @param array $select_attrs the attributes for the
+ *     select tag. These attributes render like in
+ *     c\attrs(). If this array contains the value
+ *     'multiple', then '[]' is appended to the select
+ *     tag name attribute.
+ * @param mixed $selected_values the values that are
+ *     selected by default. These match against the
+ *     array keys of the $options argument. If the
+ *     $select_attrs argument contains the value
+ *     'multiple' then this should be an array,
+ *     otherwise this should be a scalar value.
+ * @return string a select tag containing option
+ *     tags
+ */
 function drop_down(
     array $options,
     array $select_attrs = array(),
