@@ -1,0 +1,10 @@
+div[id *= "c_pants"] {
+    unicode-bidi:embed;
+    direction:rtl;
+    text-align:left;
+}
+
+div[id *= "c_pants"] * {
+    unicode-bidi:embed;
+    direction:ltr;
+}

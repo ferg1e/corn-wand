@@ -1026,3 +1026,27 @@ function dscheckboxes(
             $checkboxes,
             $checked_values));
 }
+
+function radio_buttons(
+    $name,
+    array $radio_buttons,
+    $checked_value = null)
+{
+    $i = 0;
+    ob_start();
+
+    foreach($radio_buttons as $value => $label) {
+        print dlinput(
+            $label,
+            array(
+                'id' => $name . $i++,
+                'name' => $name,
+                'type' => 'radio',
+                'value' => $value,
+                !is_null($checked_value) && $value == $checked_value
+                    ? 'checked'
+                    : ''));
+    }
+
+    return ob_get_clean();
+}
