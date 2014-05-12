@@ -1,0 +1,14 @@
+body > div {
+    margin-bottom:2em;
+}
+
+div div {
+    unicode-bidi:embed;
+    direction:rtl;
+    text-align:left;
+}
+
+div div * {
+    unicode-bidi:embed;
+    direction:ltr;
+}

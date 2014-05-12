@@ -1093,3 +1093,20 @@ function sradio_buttons(
             $radio_buttons,
             $checked_value);
 }
+
+function dsradio_buttons(
+    $title,
+    $name,
+    array $radio_buttons,
+    $checked_value = null,
+    array $div_attrs = array())
+{
+    $div_attrs['id'] = "c_$name";
+    return div(
+        $div_attrs,
+        sradio_buttons(
+            $title,
+            $name,
+            $radio_buttons,
+            $checked_value));
+}
