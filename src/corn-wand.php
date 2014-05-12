@@ -1076,3 +1076,20 @@ function radio_buttons(
 
     return ob_get_clean();
 }
+
+function sradio_buttons(
+    $title,
+    $name,
+    array $radio_buttons,
+    $checked_value = null)
+{
+    return
+        span(
+            array('id' => "t_$name"),
+            $title)
+
+        . radio_buttons(
+            $name,
+            $radio_buttons,
+            $checked_value);
+}
