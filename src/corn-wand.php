@@ -987,7 +987,7 @@ function drop_down(
  *     $select_attrs argument contains the value
  *     'multiple' then this should be an array,
  *     otherwise this should be a scalar value.
-  * @param array $label_attrs the attributes for the
+ * @param array $label_attrs the attributes for the
  *     label tag. These attributes render like in
  *     c\attrs().
  * @return string a label tag and a select tag
