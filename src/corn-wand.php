@@ -1010,6 +1010,46 @@ function ldrop_down(
         . drop_down($options, $select_attrs, $selected_values);
 }
 
+/**
+ * Get a string that is a div containing a label tag
+ * and a select tag. There are option tags inside the
+ * select tag. You cannot set option tag attributes
+ * using this function. However, the option tag value
+ * attribute and selected value will be set for you.
+ * This function will handle single select and multi-
+ * select.
+ *
+ * @param string $label the content for the label
+ *     tag. This value is not escaped.
+ * @param array $options each element in this array
+ *     is an option tag. The array key is the option
+ *     value and the array value is the option tag
+ *     content(this content value is escaped).
+ * @param array $select_attrs the attributes for the
+ *     select tag. These attributes render like in
+ *     c\attrs(). If the 'id' key is set then the
+ *     following attributes will be set automatically:
+ *     the select 'name' will be $id; the label 'id'
+ *     will be "l_$id"; the label 'for' will be
+ *     $id and the div 'id' will be "c_$id". If this
+ *     array contains the value 'multiple', then '[]'
+ *     is appended to the select tag name attribute.
+ * @param mixed $selected_values the values that are
+ *     selected by default. These match against the
+ *     array keys of the $options argument. If the
+ *     $select_attrs argument contains the value
+ *     'multiple' then this should be an array,
+ *     otherwise this should be a scalar value.
+ * @param array $label_attrs the attributes for the
+ *     label tag. These attributes render like in
+ *     c\attrs().
+ * @param array $div_attrs the attributes for the
+ *     div tag. These attributes render like in
+ *     c\attrs().
+ * @return string a div containing a label tag and
+ *     a select tag. There are option tags inside
+ *     the select tag.
+ */
 function dldrop_down(
     $label,
     array $options,
