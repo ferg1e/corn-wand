@@ -1072,6 +1072,25 @@ function dldrop_down(
             $label_attrs));
 }
 
+/**
+ * Get a string that is a group of HTML checkboxes.
+ * Each checkbox renders using c\dlinput(), i.e. each
+ * checkbox is a div containing a label tag and an
+ * input tag.
+ *
+ * @param string $name the value of the name attribute
+ *      for all input tags is "$name[]". The value of
+ *      the id attribute for each input is "$name0",
+ *      "$name1", "$name2", ...
+ * @param array $checkboxes each element in this array
+ *     is a checkbox rendered with c\dlinput(). The
+ *     array key is the checkbox input value. The array
+ *     value is the label tag content.
+ * @param array $checked_values the values that are
+ *     checked by default. These match against the
+ *     array keys of the $checkboxes argument.
+ * @return string a group of HTML checkboxes.
+ */
 function checkboxes(
     $name,
     array $checkboxes,
