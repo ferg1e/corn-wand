@@ -87,8 +87,19 @@ echo c\br(); //<br/>
 ```
 
 ```php
-echo c\input(array('id' => 'username'));
-//<input id="username"/>
+echo c\input(array('id' => 'username')); //<input id="username"/>
+```
+
+```php
+echo c\div('hello'); //<div>hello</div>
+```
+
+```php
+echo c\span(
+    array('id' => 'tool'),
+    'hammer');
+
+//<span id="tool">hammer</span>
 ```
 
 
