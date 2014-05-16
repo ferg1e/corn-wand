@@ -2,26 +2,6 @@
 
 Corn Wand is a PHP functional library for generating HTML. I'm still
 working on the first release. This README is in an unfinished state.
-Here's a preview:
-
-```php
-<?php
-
-require 'corn-wand.php';
-
-echo
-    c\html5(
-        array('lang' => 'en'),
-        c\head(
-            c\meta(array('charset' => 'utf-8')),
-            c\title('A Couple States')),
-        c\body(
-            c\ol(
-                c\li('Utah'),
-                c\li('California'),
-                c\li('New York'),
-                c\li('Florida'))));
-```
 
 ## Documentation
 
@@ -34,7 +14,7 @@ documentation with [phpDocumentor](http://phpdoc.org/).
 
 ## Code
 
-The code is on GitHub: <https://github.com/al-codepone/corn-wand>
+<https://github.com/al-codepone/corn-wand>
 
 ## Installation
 
@@ -57,6 +37,7 @@ require 'corn-wand.php';
 ## Tag Functions
 
 There's a function for each HTML tag. Here's the list of supported tags:
+
 `a`, `abbr`, `address`, `area`, `article`, `aside`, `audio`, `b`, `base`,
 `bdi`, `bdo`, `blockquote`, `body`, `br`, `button`, `canvas`, `caption`,
 `cite`, `code`, `col`, `colgroup`, `content`, `data`, `datalist`, `dd`,
@@ -73,7 +54,6 @@ There's a function for each HTML tag. Here's the list of supported tags:
 `ul`, `var`, `video`, `wbr`.
 
 All tag function names are the name of the tag except for `var`. Use `_var()` instead.
-
 All the tag functions work the same way: if the first agrument is an array then it is
 the tag attributes. All other arguments are concatenated together to form the tag
 content. Examples:
@@ -91,6 +71,15 @@ echo c\input(array('id' => 'username')); //<input id="username"/>
 ```
 
 ```php
+echo c\input(
+    array(
+        'type' => 'checkbox',
+        'checked'));
+
+//<input type="checkbox" checked/>
+```
+
+```php
 echo c\div('hello'); //<div>hello</div>
 ```
 
@@ -100,6 +89,50 @@ echo c\span(
     'hammer');
 
 //<span id="tool">hammer</span>
+```
+
+```php
+echo c\p(
+    'red ',
+    'yellow ',
+    'blue');
+
+//<p>red yellow blue</p>
+```
+
+```php
+echo
+    c\div(
+        c\p('p1'),
+        c\p('p2'));
+
+/*
+<div>
+    <p>p1</p>
+    <p>p2</p>
+</div>
+*/
+```
+
+```php
+echo
+    c\html(
+        array('lang' => 'en'),
+        c\head(
+            c\title('My Page')),
+        c\body(
+            c\h1('My Page')));
+
+/*
+<html lang="en">
+    <head>
+        <title>My Page</title>
+    </head>
+    <body>
+        <h1>My Page</h1>
+    </body>
+</html>
+*/
 ```
 
 
