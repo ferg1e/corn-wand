@@ -747,6 +747,40 @@ function js() {
     return ob_get_clean();
 }
 
+function ulist() {
+    if($args = func_get_args()) {
+        $num_args = count($args);
+        $first_is_array = is_array($args[0]);
+        $last_is_array = is_array($args[$num_args - 1]);
+
+        if($first_is_array) {
+            $list_items = $args[0];
+        }
+        else if($num_args > 1 && $last_is_array) {
+            $list_items = array_slice($args, 0, $num_args - 1);
+        }
+        else {
+            $list_items = $args;
+        }
+
+        $list_attrs = ($num_args > 1 && $last_is_array)
+            ? $args[$num_args - 1]
+            : array();
+
+        $li_tags = array();
+
+        foreach($list_items as $i => $v) {
+            $li_tags[] = is_array($v)
+                ? li($v, $i)
+                : li($v);
+        }
+
+        return ul(
+            $list_attrs,
+            implode($li_tags));
+    }
+}
+
 /**
  * Get a string that is a label tag and an input
  * tag.
