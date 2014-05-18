@@ -113,6 +113,20 @@ function repeat($name, array $contents) {
     return ob_get_clean();
 }
 
+function trepeat(
+    $parent_name,
+    $child_name,
+    array $contents,
+    array $parent_attrs = array())
+{
+    return tag(
+        $parent_name,
+        $parent_attrs,
+        repeat(
+            $child_name,
+            $contents));
+}
+
 /** @see c\tag() same but name is 'a' */
 function a() {
     return unpack_tag('a', func_get_args());
