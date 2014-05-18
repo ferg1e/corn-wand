@@ -101,6 +101,18 @@ function unpack_tag($name, array $array) {
     return call_user_func_array('c\tag', $array);
 }
 
+function repeat($name, array $contents) {
+    ob_start();
+
+    foreach($contents as $i => $v) {
+        print is_array($v)
+            ? tag($name, $v, $i)
+            : tag($name, $v);
+    }
+
+    return ob_get_clean();
+}
+
 /** @see c\tag() same but name is 'a' */
 function a() {
     return unpack_tag('a', func_get_args());
