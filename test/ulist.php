@@ -12,11 +12,6 @@ echo
                     'three')),
 
             c\ulist(
-                'one',
-                'two',
-                'three'),
-
-            c\ulist(
                 array(
                     'four',
                     'five',
@@ -24,13 +19,8 @@ echo
                 array('style' => 'background:#ddeeee')),
 
             c\ulist(
-                'four',
-                'five',
-                'six',
-                array('style' => 'background:#eeeedd')),
-
-            c\ulist(
                 array(
-                    'seven' => array('style' => 'color:brown'),
+                    'seven',
                     'eight' => array('style' => 'font-size:2em'),
-                    'nine'))));
+                    'nine',
+                    'ten' => array('style' => 'color:red')))));
