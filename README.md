@@ -59,24 +59,9 @@ the tag attributes. All other arguments are concatenated together to form the ta
 content. Examples:
 
 ```php
-echo c\html(); //<html/>
-```
-
-```php
 echo c\br(); //<br/>
-```
-
-```php
-echo c\input(array('id' => 'username')); //<input id="username"/>
-```
-
-```php
-echo c\input(
-    array(
-        'type' => 'checkbox',
-        'checked'));
-
-//<input type="checkbox" checked/>
+echo c\html(); //<html/>
+echo c\p(); //<p/>
 ```
 
 ```php
@@ -84,11 +69,15 @@ echo c\div('hello'); //<div>hello</div>
 ```
 
 ```php
-echo c\span(
-    array('id' => 'tool'),
-    'hammer');
+echo c\div(array('id' => 'hi')); //<div id="hi"/>
+```
 
-//<span id="tool">hammer</span>
+```php
+echo c\div(
+    array('id' => 'hi'),
+    'hello');
+
+//<div id="hi">hello</div>
 ```
 
 ```php
@@ -101,27 +90,62 @@ echo c\p(
 ```
 
 ```php
-echo
-    c\div(
-        c\p('p1'),
-        c\p('p2'));
+echo c\p(
+    array('id' => 'colors'),
+    'red ',
+    'yellow ',
+    'blue');
+
+//<p id="colors">red yellow blue</p>
+```
+
+```php
+echo c\input(array(
+    'id' => 'agree',
+    'type' => 'checkbox',
+    'checked'));
+
+//<input id="agree" type="checkbox" checked/>
+```
+
+```php
+echo c\div(c\span('ok Dad'));
+
+/*
+<div>
+    <span>ok Dad</span>
+</div>
+*/
+```
+
+```php
+echo 
+c\div(
+    c\p('p1'),
+    c\p('p2'),
+    c\p('p3'),
+    c\p('p4'),
+    c\p('p5'));
 
 /*
 <div>
     <p>p1</p>
     <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
 </div>
 */
 ```
 
 ```php
 echo
-    c\html(
-        array('lang' => 'en'),
-        c\head(
-            c\title('My Page')),
-        c\body(
-            c\h1('My Page')));
+c\html(
+    array('lang' => 'en'),
+    c\head(
+        c\title('My Page')),
+    c\body(
+        c\h1('My Page')));
 
 /*
 <html lang="en">
