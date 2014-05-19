@@ -101,6 +101,23 @@ function unpack_tag($name, array $array) {
     return call_user_func_array('c\tag', $array);
 }
 
+/**
+ * Get a string that is the same HTML tag
+ * repeated many times. You can set the content
+ * and attributes for each individual tag.
+ *
+ * @param string $name name of tag to repeat
+ * @param array $contents the individual tag
+ *     content and attributes. If a value in
+ *     this array is an array, then that value
+ *     is the individual tag attributes and the
+ *     array key is the individual tag content.
+ *     If a value in this $contents array is
+ *     not an array, then the value is the
+ *     individual tag content.
+ * @return string an HTML tag repeated many
+ *     times
+ */
 function repeat($name, array $contents) {
     ob_start();
 
