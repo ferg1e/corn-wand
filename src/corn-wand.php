@@ -113,7 +113,7 @@ function unpack_tag($name, array $array) {
  *     is the individual tag attributes and the
  *     array key is the individual tag content.
  *     If a value in this $contents array is
- *     not an array, then the value is the
+ *     not an array, then that value is the
  *     individual tag content.
  * @return string an HTML tag repeated many
  *     times
@@ -130,17 +130,36 @@ function repeat($name, array $contents) {
     return ob_get_clean();
 }
 
+/**
+ * Get a string that is a container tag with
+ * another tag repeated many times inside.
+ *
+ * @param string $container_name name of container tag
+ * @param string $repeated_name name of repeated tag
+ * @param array $contents the content and attributes
+ *     for the repeated tags. If a value in this
+ *     array is an array, then that value is the
+ *     repeated tag attributes and the array key
+ *     is the repeated tag content. If a value in
+ *     this $contents array is not an array, then
+ *     that value is the repeated tag content.
+ * @param array $container_attrs the attributes for
+ *     the container tag. These attributes render
+ *     like in c\attrs().
+ * @return string container tag with another tag
+ *     repeated many times inside
+ */
 function trepeat(
-    $parent_name,
-    $child_name,
+    $container_name,
+    $repeated_name,
     array $contents,
-    array $parent_attrs = array())
+    array $container_attrs = array())
 {
     return tag(
-        $parent_name,
-        $parent_attrs,
+        $container_name,
+        $container_attrs,
         repeat(
-            $child_name,
+            $repeated_name,
             $contents));
 }
 
