@@ -809,6 +809,12 @@ function js() {
     return ob_get_clean();
 }
 
+/**
+ * @see c\trepeat() same but $container_name
+ *     already set to 'ul' and $repeated_name
+ *     already set to 'li'. A single level
+ *     unordered list.
+ */
 function ulist(
     array $items,
     array $list_attrs = array())
@@ -816,6 +822,12 @@ function ulist(
     return trepeat('ul', 'li', $items, $list_attrs);
 }
 
+/**
+ * @see c\trepeat() same but $container_name
+ *     already set to 'ol' and $repeated_name
+ *     already set to 'li'. A single level
+ *     ordered list.
+ */
 function olist(
     array $items,
     array $list_attrs = array())
