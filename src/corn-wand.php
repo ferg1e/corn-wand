@@ -816,6 +816,13 @@ function ulist(
     return trepeat('ul', 'li', $items, $list_attrs);
 }
 
+function olist(
+    array $items,
+    array $list_attrs = array())
+{
+    return trepeat('ol', 'li', $items, $list_attrs);
+}
+
 /**
  * Get a string that is a label tag and an input
  * tag.
