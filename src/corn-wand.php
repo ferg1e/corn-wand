@@ -1241,6 +1241,33 @@ function scheckboxes(
             $checked_values);
 }
 
+/**
+ * Get a string that is a div containing both a title
+ * span and a group of HTML checkboxes. Each checkbox
+ * renders using c\dlinput(), i.e. each checkbox is a
+ * div containing a label tag and an input tag.
+ *
+ * @param string $title the content for the span tag.
+ *     This value is not escaped.
+ * @param string $name the value of the name attribute
+ *     for all input tags is "$name[]". The value of
+ *     the id attribute for each input is "$name0",
+ *     "$name1", "$name2", etc. The value of the span
+ *     id attribute is "t_$name". The value of the
+ *     div id attribute is "c_$name".
+ * @param array $checkboxes each element in this array
+ *     is a checkbox rendered with c\dlinput(). The
+ *     array key is the checkbox value. The array
+ *     value is the label tag content.
+ * @param array $checked_values the values that are
+ *     checked by default. These match against the
+ *     array keys of the $checkboxes argument.
+ * @param array $div_attrs the attributes for the
+ *     div tag. These attributes render like in
+ *     c\attrs().
+ * @return string a div containing both a title span
+ *     and a group of HTML checkboxes.
+ */
 function dscheckboxes(
     $title,
     $name,
