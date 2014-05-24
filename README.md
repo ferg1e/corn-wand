@@ -159,6 +159,71 @@ c\html(
 */
 ```
 
+## More Functions
+
+There are many more functions. These functions return more intricate HTML.
+
+### html5()
+
+`html5()` works like `html()` but has the HTML5 doctype in front:
+
+```php
+echo c\html5(c\body('hi'));
+
+/*
+<!doctype html>
+<html>
+    <body>hi</body>
+</html>
+*/
+```
+
+### css() and js()
+
+`css()` and `js()` work similarly:
+
+```php
+echo c\css(
+    'one.css',
+    'two.css',
+    'three.css');
+
+/*
+<link rel="stylesheet" href="one.css"/>
+<link rel="stylesheet" href="two.css"/>
+<link rel="stylesheet" href="three.css"/>
+*/
+```
+
+```php
+echo c\js(
+    'menu.js',
+    'game.js',
+    'slide-show.js');
+
+/*
+<script src="menu.js"></script>
+<script src="game.js"></script>
+<script src="slide-show.js"></script>
+*/
+```
+
+You can use an array for these if you like:
+
+```php
+$css = array();
+$css[] = 'all.css';
+$css[] = 'header.css';
+$css[] = 'nav.css';
+
+echo c\css($css);
+
+/*
+<link rel="stylesheet" href="all.css"/>
+<link rel="stylesheet" href="header.css"/>
+<link rel="stylesheet" href="nav.css"/>
+*/
+```
 
 ## LICENSE
 
