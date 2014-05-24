@@ -1285,6 +1285,25 @@ function dscheckboxes(
             $checked_values));
 }
 
+/**
+ * Get a string that is a group of HTML radio buttons.
+ * Each radio button renders using c\dlinput(), i.e.
+ * each radio button is a div containing a label tag
+ * and an input tag.
+ *
+ * @param string $name the value of the name attribute
+ *      for all input tags is $name. The value of
+ *      the id attribute for each input is "$name0",
+ *      "$name1", "$name2", etc.
+ * @param array $radio_buttons each element in this
+ *     array is a radio button rendered with
+ *     c\dlinput(). The array key is the radio button
+ *     value. The array value is the label tag content.
+ * @param array $checked_value the value that is
+ *     checked by default. This matches against the
+ *     array keys of the $radio_buttons argument.
+ * @return string a group of HTML radio buttons.
+ */
 function radio_buttons(
     $name,
     array $radio_buttons,
