@@ -225,6 +225,60 @@ echo c\css($css);
 */
 ```
 
+### ulist() and olist()
+
+Get `<ul>` or `<ol>` with items:
+
+```php
+echo c\ulist(array(
+    'seven',
+    'six',
+    'five'));
+
+/*
+<ul>
+    <li>seven</li>
+    <li>six</li>
+    <li>five</li>
+</ul>
+*/
+```
+
+```php
+echo
+c\olist(
+    array(
+        'salsa',
+        'bbq',
+        'cheese'),
+    array('type' => 'i'));
+
+/*
+<ol type="i">
+    <li>salsa</li>
+    <li>bbq</li>
+    <li>cheese</li>
+</ol>
+*/
+```
+
+Use an array for the array value to set `<li>` attributes:
+
+```php
+echo c\olist(array(
+    'salsa',
+    'bbq' => array('id' => 'mid'),
+    'cheese'));
+
+/*
+<ol>
+    <li>salsa</li>
+    <li id="mid">bbq</li>
+    <li>cheese</li>
+</ol>
+*/
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>
