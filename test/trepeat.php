@@ -21,4 +21,11 @@ c\html(
                 'five',
                 'six'),
             array(
-                'type' => 'i'))));
+                'type' => 'i')),
+
+        c\trepeat(
+            'ul',
+            'li',
+            'one million',
+            'two million',
+            'three million')));

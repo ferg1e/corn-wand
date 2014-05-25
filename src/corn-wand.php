@@ -118,16 +118,22 @@ function unpack_tag($name, array $array) {
  * @return string an HTML tag repeated many
  *     times
  */
-function repeat($name, array $contents) {
-    ob_start();
+function repeat($name) {
+    if($oargs = array_slice(func_get_args(), 1)) {
+        $contents = is_array($oargs[0])
+            ? $oargs[0]
+            : $oargs;
 
-    foreach($contents as $i => $v) {
-        print is_array($v)
-            ? tag($name, $v, $i)
-            : tag($name, $v);
+        ob_start();
+
+        foreach($contents as $i => $v) {
+            print is_array($v)
+                ? tag($name, $v, $i)
+                : tag($name, $v);
+        }
+
+        return ob_get_clean();
     }
-
-    return ob_get_clean();
 }
 
 /**
@@ -149,18 +155,33 @@ function repeat($name, array $contents) {
  * @return string container tag with another tag
  *     repeated many times inside
  */
-function trepeat(
-    $container_name,
-    $repeated_name,
-    array $contents,
-    array $container_attrs = array())
-{
-    return tag(
-        $container_name,
-        $container_attrs,
-        repeat(
-            $repeated_name,
-            $contents));
+function trepeat($container_name, $repeated_name) {
+    if($oargs = array_slice(func_get_args(), 2)) {
+        $num_oargs = count($oargs);
+        $first_is_array = is_array($oargs[0]);
+        $last_is_array = is_array($oargs[$num_oargs - 1]);
+
+        if($first_is_array) {
+            $contents = $oargs[0];
+        }
+        else if($num_oargs > 1 && $last_is_array) {
+            $contents = array_slice($oargs, 0, $num_oargs - 1);
+        }
+        else {
+            $contents = $oargs;
+        }
+
+        $container_attrs = ($num_oargs > 1 && $last_is_array)
+            ? $oargs[$num_oargs - 1]
+            : array();
+
+        return tag(
+            $container_name,
+            $container_attrs,
+            repeat(
+                $repeated_name,
+                $contents));
+    }
 }
 
 /** @see c\tag() same but name is 'a' */

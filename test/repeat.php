@@ -12,13 +12,9 @@ c\html(
                 'two',
                 'three')),
 
-        c\repeat(
-            'p',
-            array(
-                'north' => array('style' => 'background:#ddeedd'),
-                'south',
-                'east',
-                'west' => array('style' => 'font-size:2em'))),
+        c\br(),
+        c\repeat('div', 'one', 'two', 'three'),
+        c\br(),
 
         c\repeat(
             'span',
