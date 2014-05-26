@@ -777,6 +777,23 @@ function html5() {
 }
 
 /**
+ * Get a string that is a hyperlink.
+ *
+ * @param string $url the URL the link goes to
+ * @param string $content the text that shows
+ *     for the link. This defaults to $url if
+ *     not supplied.
+ * @return string a hyperlink
+ */
+function hlink($url, $content = '') {
+    $content = $content ? $content : $url;
+
+    return a(
+        array('href' => $url),
+        $content);
+}
+
+/**
  * Get a string that is link tags for CSS
  * files.
  *
