@@ -836,11 +836,10 @@ function js() {
  *     already set to 'li'. A single level
  *     unordered list.
  */
-function ulist(
-    array $items,
-    array $list_attrs = array())
-{
-    return trepeat('ul', 'li', $items, $list_attrs);
+function ulist() {
+    $args = func_get_args();
+    array_unshift($args, 'ul', 'li');
+    return call_user_func_array('c\trepeat', $args);
 }
 
 /**
@@ -849,11 +848,10 @@ function ulist(
  *     already set to 'li'. A single level
  *     ordered list.
  */
-function olist(
-    array $items,
-    array $list_attrs = array())
-{
-    return trepeat('ol', 'li', $items, $list_attrs);
+function olist() {
+    $args = func_get_args();
+    array_unshift($args, 'ol', 'li');
+    return call_user_func_array('c\trepeat', $args);
 }
 
 /**

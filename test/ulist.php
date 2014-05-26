@@ -5,6 +5,14 @@ require '../src/corn-wand.php';
 echo
     c\html5(
         c\body(
+            c\ulist('1,000', '3,000', '5,000'),
+
+            c\ulist(
+                'house',
+                'mouse',
+                'blouse',
+                array('style' => 'color:#88aaaa')),
+
             c\ulist(
                 array(
                     'one',

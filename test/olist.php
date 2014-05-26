@@ -5,6 +5,14 @@ require '../src/corn-wand.php';
 echo
     c\html5(
         c\body(
+            c\olist('Jan', 'Feb', 'Mar'),
+
+            c\olist(
+                'Apr',
+                'May',
+                'Jun',
+                array('type' => 'a')),
+
             c\olist(
                 array(
                     'Monday',
