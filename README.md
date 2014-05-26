@@ -230,10 +230,7 @@ echo c\css($css);
 Get `<ul>` or `<ol>` with items:
 
 ```php
-echo c\ulist(array(
-    'seven',
-    'six',
-    'five'));
+echo c\ulist('seven', 'six', 'five');
 
 /*
 <ul>
@@ -245,12 +242,10 @@ echo c\ulist(array(
 ```
 
 ```php
-echo
-c\olist(
-    array(
-        'salsa',
-        'bbq',
-        'cheese'),
+echo c\olist(
+    'salsa',
+    'bbq',
+    'cheese',
     array('type' => 'i'));
 
 /*
@@ -262,7 +257,28 @@ c\olist(
 */
 ```
 
-Use an array for the array value to set `<li>` attributes:
+You can use an array for the `<li>` contents:
+
+```php
+$contents = array();
+$contents[] = 'salsa';
+$contents[] = 'bbq';
+$contents[] = 'cheese';
+
+echo c\olist(
+    $contents,
+    array('type' => 'i'));
+
+/*
+<ol type="i">
+    <li>salsa</li>
+    <li>bbq</li>
+    <li>cheese</li>
+</ol>
+*/
+```
+
+Use a nested array to set `<li>` attributes:
 
 ```php
 echo c\olist(array(
