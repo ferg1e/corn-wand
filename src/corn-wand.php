@@ -142,16 +142,20 @@ function repeat($name) {
  *
  * @param string $container_name name of container tag
  * @param string $repeated_name name of repeated tag
- * @param array $contents the content and attributes
- *     for the repeated tags. If a value in this
- *     array is an array, then that value is the
- *     repeated tag attributes and the array key
- *     is the repeated tag content. If a value in
- *     this $contents array is not an array, then
- *     that value is the repeated tag content.
- * @param array $container_attrs the attributes for
- *     the container tag. These attributes render
- *     like in c\attrs().
+ * @param mixed $args,... unlimited, the content and
+ *     attributes for the repeated tags - and the
+ *     attributes for the container tag. This can be
+ *     unlimited arguments or a single array - followed
+ *     by an optional array. If a single array and an
+ *     array value is an array, then that value is the
+ *     repeated tag attributes and the array key is
+ *     the repeated tag content. If a value in the
+ *     single array is not an array, then that value
+ *     is the repeated tag content. If there is more
+ *     than one argument here(4 or more total) and the
+ *     last argument is an array, then that array is
+ *     the container tag attributes; these attributes
+ *     render like in c/attrs().
  * @return string container tag with another tag
  *     repeated many times inside
  */
