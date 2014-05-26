@@ -107,14 +107,14 @@ function unpack_tag($name, array $array) {
  * and attributes for each individual tag.
  *
  * @param string $name name of tag to repeat
- * @param array $contents the individual tag
- *     content and attributes. If a value in
- *     this array is an array, then that value
- *     is the individual tag attributes and the
- *     array key is the individual tag content.
- *     If a value in this $contents array is
- *     not an array, then that value is the
- *     individual tag content.
+ * @param mixed $args,... unlimited, the individual
+ *     tag content and attributes. This can be
+ *     unlimited arguments or a single array. If
+ *     a single array and an array value is an
+ *     array, then that value is the tag attributes
+ *     and the array key is the tag content. If a
+ *     value in the array is not an array, then
+ *     that value is the tag content.
  * @return string an HTML tag repeated many
  *     times
  */
