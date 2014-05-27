@@ -295,6 +295,38 @@ echo c\olist(array(
 */
 ```
 
+### linput() and dlinput()
+
+`linput()` is for a label and an input. Setting `id` will set other attributes:
+
+```php
+echo c\linput(
+    'First Name',
+    array('id' => 'first'));
+
+/*
+<label id="l_first" for="first">First Name</label>
+<input id="first" name="first"/>
+*/
+```
+
+`dlinput()` is the same but with a container div:
+
+```php
+echo c\dlinput(
+    'Email',
+    array(
+        'id' => 'email',
+        'type' => 'email'));
+
+/*
+<div id="c_email">
+    <label id="l_email" for="email">Email</label>
+    <input id="email" type="email" name="email"/>
+</div>
+*/
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>
