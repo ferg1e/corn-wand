@@ -227,11 +227,7 @@ echo c\js(
 You can use an array for these if you like:
 
 ```php
-$css = array();
-$css[] = 'all.css';
-$css[] = 'header.css';
-$css[] = 'nav.css';
-
+$css = array('all.css', 'header.css', 'nav.css');
 echo c\css($css);
 
 /*
@@ -276,13 +272,9 @@ echo c\olist(
 You can use an array for the `<li>` contents:
 
 ```php
-$contents = array();
-$contents[] = 'salsa';
-$contents[] = 'bbq';
-$contents[] = 'cheese';
-
+$items = array('salsa', 'bbq', 'cheese');
 echo c\olist(
-    $contents,
+    $items,
     array('type' => 'i'));
 
 /*
