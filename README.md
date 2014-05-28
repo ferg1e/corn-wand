@@ -178,6 +178,22 @@ echo c\html5(c\body('hi'));
 */
 ```
 
+### hlink()
+
+Get a hyperlink:
+
+```php
+echo c\hlink('http://github.com');
+
+//<a href="http://github.com">http://github.com</a>
+```
+
+```php
+echo c\hlink('http://github.com', 'GitHub');
+
+//<a href="http://github.com">GitHub</a>
+```
+
 ### css() and js()
 
 `css()` and `js()` work similarly:
