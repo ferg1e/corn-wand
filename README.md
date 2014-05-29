@@ -120,21 +120,17 @@ echo c\div(c\span('ok Dad'));
 
 ```php
 echo 
-c\div(
-    c\p('p1'),
-    c\p('p2'),
-    c\p('p3'),
-    c\p('p4'),
-    c\p('p5'));
+c\ul(
+    c\li('item 1'),
+    c\li('item 2'),
+    c\li('item 3'));
 
 /*
-<div>
-    <p>p1</p>
-    <p>p2</p>
-    <p>p3</p>
-    <p>p4</p>
-    <p>p5</p>
-</div>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
 */
 ```
 
