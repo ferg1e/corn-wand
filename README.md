@@ -259,7 +259,7 @@ echo c\olist(
 */
 ```
 
-You can use an array for the `<li>` contents:
+You can use an array for the items:
 
 ```php
 $items = array('salsa', 'bbq', 'cheese');
@@ -276,7 +276,7 @@ echo c\olist(
 */
 ```
 
-Use a nested array to set `<li>` attributes:
+Use a nested array to set item attributes:
 
 ```php
 echo c\olist(array(
