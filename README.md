@@ -195,10 +195,7 @@ echo c\hlink('http://github.com', 'GitHub');
 `css()` and `js()` work similarly:
 
 ```php
-echo c\css(
-    'one.css',
-    'two.css',
-    'three.css');
+echo c\css('one.css', 'two.css', 'three.css');
 
 /*
 <link rel="stylesheet" href="one.css"/>
@@ -208,10 +205,7 @@ echo c\css(
 ```
 
 ```php
-echo c\js(
-    'menu.js',
-    'game.js',
-    'slide-show.js');
+echo c\js('menu.js', 'game.js', 'slide-show.js');
 
 /*
 <script src="menu.js"></script>
