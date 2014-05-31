@@ -292,16 +292,31 @@ echo c\olist(array(
 
 ### linput() and dlinput()
 
-`linput()` is for a label and an input. Setting `id` will set other attributes:
+`linput()` is for a label and an input:
 
 ```php
 echo c\linput(
     'First Name',
-    array('id' => 'first'));
+    array('value' => 'Fred'));
+
+/*
+<label>First Name</label>
+<input value="Fred"/>
+*/
+```
+
+Setting `id` will set other attributes:
+
+```php
+echo c\linput(
+    'First Name',
+    array(
+        'value' => 'Fred',
+        'id' => 'first'));
 
 /*
 <label id="l_first" for="first">First Name</label>
-<input id="first" name="first"/>
+<input value="Fred" id="first" name="first"/>
 */
 ```
 
@@ -310,14 +325,12 @@ echo c\linput(
 ```php
 echo c\dlinput(
     'Email',
-    array(
-        'id' => 'email',
-        'type' => 'email'));
+    array('id' => 'email'));
 
 /*
 <div id="c_email">
     <label id="l_email" for="email">Email</label>
-    <input id="email" type="email" name="email"/>
+    <input id="email" name="email"/>
 </div>
 */
 ```
