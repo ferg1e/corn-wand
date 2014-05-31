@@ -81,10 +81,7 @@ echo c\div(
 ```
 
 ```php
-echo c\p(
-    'red ',
-    'yellow ',
-    'blue');
+echo c\p('red ', 'yellow ', 'blue');
 
 //<p>red yellow blue</p>
 ```
