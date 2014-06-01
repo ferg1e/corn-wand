@@ -372,7 +372,6 @@ echo c\dltextarea(
     array('id' => 'message'));
 
 /*
-
 <div id="c_message">
     <label id="l_message" for="message">Your Message</label>
     <textarea id="message" name="message"></textarea>
