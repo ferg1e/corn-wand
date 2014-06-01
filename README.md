@@ -335,6 +335,51 @@ echo c\dlinput(
 */
 ```
 
+### ltextarea() and dltextarea()
+
+`ltextarea()` is for a label and a textarea:
+
+```php
+echo c\ltextarea(
+    'Your Message',
+    array('name' => 'message'));
+
+/*
+<label>Your Message</label>
+<textarea name="message"></textarea>
+*/
+```
+
+Setting `id` will set other attributes:
+
+```php
+echo c\ltextarea(
+    'Your Message',
+    array('id' => 'message'),
+    'Hello there');
+
+/*
+<label id="l_message" for="message">Your Message</label>
+<textarea id="message" name="message">Hello there</textarea>
+*/
+```
+
+`dltextarea()` is the same but with a container div:
+
+```php
+echo c\dltextarea(
+    'Your Message',
+    array('id' => 'message'));
+
+/*
+
+<div id="c_message">
+    <label id="l_message" for="message">Your Message</label>
+    <textarea id="message" name="message"></textarea>
+</div>
+*/
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>
