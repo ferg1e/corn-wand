@@ -39,7 +39,7 @@ echo
                 array(
                     's' => 'small',
                     'r' => 'red'),
-                array('id' => 'xtype'),
+                array('name' => 'xtype'),
                 null,
                 array(
                     'style' => 'border:20px red ridge'))));

@@ -10,6 +10,7 @@ echo
                     'zero',
                     'one',
                     'two')),
+
             c\drop_down(
                 array(
                     'g' => 'gold',
@@ -18,10 +19,11 @@ echo
                 array(
                     'name' => 'medal',
                     'multiple')),
+
             c\drop_down(
                 array(
                     'past',
                     'present',
                     'future'),
-                array('name' => 'time'),
+                array('id' => 'time'),
                 2)));

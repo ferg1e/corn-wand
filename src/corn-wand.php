@@ -1044,9 +1044,11 @@ function dltextarea(
  *     content(this content value is escaped).
  * @param array $select_attrs the attributes for the
  *     select tag. These attributes render like in
- *     c\attrs(). If this array contains the value
- *     'multiple', then '[]' is appended to the select
- *     tag name attribute.
+ *     c\attrs(). If the 'id' key is set then the
+ *     'name' key is set to the same value as 'id'.
+ *     If this array contains the value 'multiple',
+ *     then '[]' is appended to the select tag name
+ *     attribute.
  * @param mixed $selected_values the values that are
  *     selected by default. These match against the
  *     array keys of the $options argument. If the
@@ -1061,6 +1063,10 @@ function drop_down(
     array $select_attrs = array(),
     $selected_values = array())
 {
+    if($id = $select_attrs['id']) {
+        $select_attrs['name'] = $id;
+    }
+
     $is_multiple = in_array('multiple', $select_attrs);
 
     if($is_multiple) {
@@ -1129,7 +1135,6 @@ function ldrop_down(
     array $label_attrs = array())
 {
     if($id = $select_attrs['id']) {
-        $select_attrs['name'] = $id;
         $label_attrs['id'] = "l_$id";
         $label_attrs['for'] = $id;
     }
