@@ -379,6 +379,76 @@ echo c\dltextarea(
 */
 ```
 
+### drop_down(), ldrop_down() and dldrop_down()
+
+`drop_down()` is for a select tag:
+
+```php
+echo c\drop_down(
+    array(
+        'small',
+        'medium',
+        'large'),
+    array('id' => 'size'));
+
+/*
+<select id="size" name="size">
+    <option value="0">small</option>
+    <option value="1">medium</option>
+    <option value="2">large</option>
+</select>
+*/
+```
+
+`ldrop_down()` adds a label:
+
+```php
+echo c\ldrop_down(
+    'Season',
+    array(
+        'f' => 'Fall',
+        'w' => 'Winter',
+        's' => 'Spring'),
+    array('id' => 'season'));
+
+/*
+<label id="l_season" for="season">Season</label>
+<select id="season" name="season">
+    <option value="f">Fall</option>
+    <option value="w">Winter</option>
+    <option value="s">Spring</option>
+</select>
+*/
+```
+
+`dldrop_down()` adds a div and a label:
+
+```php
+echo c\dldrop_down(
+    'Sports',
+    array(
+        1 => 'soccer',
+        'basketball',
+        'baseball',
+        'rugby'),
+    array(
+        'id' => 'sports',
+        'multiple'),
+    array(1, 2));
+
+/*
+<div id="c_sports">
+    <label id="l_sports" for="sports">Sports</label>
+    <select id="sports" multiple name="sports[]">
+        <option value="1" selected>soccer</option>
+        <option value="2" selected>basketball</option>
+        <option value="3">baseball</option>
+        <option value="4">rugby</option>
+    </select>
+</div>
+*/
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>
