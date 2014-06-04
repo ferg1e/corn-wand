@@ -449,6 +449,92 @@ echo c\dldrop_down(
 */
 ```
 
+### checkboxes(), scheckboxes() and dscheckboxes()
+
+`checkboxes()` is for a group of checkboxes. Each checkbox renders using `dlinput()`:
+
+```php
+echo c\checkboxes(
+    'color',
+    array(
+        'beige',
+        'cyan',
+        'puce'));
+
+/*
+<div id="c_color0">
+    <label id="l_color0" for="color0">beige</label>
+    <input id="color0" name="color[]" type="checkbox" value="0"/>
+</div>
+<div id="c_color1">
+    <label id="l_color1" for="color1">cyan</label>
+    <input id="color1" name="color[]" type="checkbox" value="1"/>
+</div>
+<div id="c_color2">
+    <label id="l_color2" for="color2">puce</label>
+    <input id="color2" name="color[]" type="checkbox" value="2"/>
+</div>
+*/
+```
+
+`scheckboxes()` adds a title span:
+
+```php
+echo c\scheckboxes(
+    'Pets',
+    'pet',
+    array(
+        'dog' => 'Dog',
+        'cat' => 'Cat',
+        'fish' => 'Fish'));
+
+/*
+<span id="t_pet">Pets</span>
+<div id="c_pet0">
+    <label id="l_pet0" for="pet0">Dog</label>
+    <input id="pet0" name="pet[]" type="checkbox" value="dog"/>
+</div>
+<div id="c_pet1">
+    <label id="l_pet1" for="pet1">Cat</label>
+    <input id="pet1" name="pet[]" type="checkbox" value="cat"/>
+</div>
+<div id="c_pet2">
+    <label id="l_pet2" for="pet2">Fish</label>
+    <input id="pet2" name="pet[]" type="checkbox" value="fish"/>
+</div>
+*/
+```
+
+`dscheckboxes()` adds a container div and a title span:
+
+```php
+echo c\dscheckboxes(
+    'Drinks',
+    'drink',
+    array(
+        'water',
+        'OJ',
+        'milk'));
+
+/*
+<div id="c_drink">
+    <span id="t_drink">Drinks</span>
+    <div id="c_drink0">
+        <label id="l_drink0" for="drink0">water</label>
+        <input id="drink0" name="drink[]" type="checkbox" value="0"/>
+    </div>
+    <div id="c_drink1">
+        <label id="l_drink1" for="drink1">OJ</label>
+        <input id="drink1" name="drink[]" type="checkbox" value="1"/>
+    </div>
+    <div id="c_drink2">
+        <label id="l_drink2" for="drink2">milk</label>
+        <input id="drink2" name="drink[]" type="checkbox" value="2"/>
+    </div>
+</div>
+*/
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>
