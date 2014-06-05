@@ -535,6 +535,93 @@ echo c\dscheckboxes(
 */
 ```
 
+### radio_buttons(), sradio_buttons() and dsradio_buttons()
+
+`radio_buttons()` is for a group of radio buttons. Each radio button renders using `dlinput()`:
+
+```php
+echo c\radio_buttons(
+    'bed',
+    array(
+        'single',
+        'queen',
+        'king'));
+
+/*
+<div id="c_bed0">
+    <label id="l_bed0" for="bed0">single</label>
+    <input id="bed0" name="bed" type="radio" value="0"/>
+</div>
+<div id="c_bed1">
+    <label id="l_bed1" for="bed1">queen</label>
+    <input id="bed1" name="bed" type="radio" value="1"/>
+</div>
+<div id="c_bed2">
+    <label id="l_bed2" for="bed2">king</label>
+    <input id="bed2" name="bed" type="radio" value="2"/>
+</div>
+*/
+```
+
+`sradio_buttons()` adds a title span:
+
+```php
+echo c\sradio_buttons(
+    'City',
+    'city',
+    array(
+        'nyc' => 'New York',
+        'queens' => 'Queens',
+        'flagstaff' => 'Flagstaff'));
+
+/*
+<span id="t_city">City</span>
+<div id="c_city0">
+    <label id="l_city0" for="city0">New York</label>
+    <input id="city0" name="city" type="radio" value="nyc"/>
+</div>
+<div id="c_city1">
+    <label id="l_city1" for="city1">Queens</label>
+    <input id="city1" name="city" type="radio" value="queens"/>
+</div>
+<div id="c_city2">
+    <label id="l_city2" for="city2">Flagstaff</label>
+    <input id="city2" name="city" type="radio" value="flagstaff"/>
+</div>
+*/
+```
+
+`dsradio_buttons()` adds a container div and a title span:
+
+```php
+echo c\dsradio_buttons(
+    'Planet',
+    'planet',
+    array(
+        'Venus',
+        'Mars',
+        'Saturn'),
+    0);
+
+/*
+<div id="c_planet">
+    <span id="t_planet">Planet</span>
+    <div id="c_planet0">
+        <label id="l_planet0" for="planet0">Venus</label>
+        <input id="planet0" name="planet" type="radio" value="0" checked/>
+    </div>
+    <div id="c_planet1">
+        <label id="l_planet1" for="planet1">Mars</label>
+        <input id="planet1" name="planet" type="radio" value="1"/>
+    </div>
+    <div id="c_planet2">
+        <label id="l_planet2" for="planet2">Saturn</label>
+        <input id="planet2" name="planet" type="radio" value="2"/>
+    </div>
+</div>
+*/
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>
