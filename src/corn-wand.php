@@ -876,6 +876,18 @@ function olist() {
 }
 
 /**
+ * Get a string that is a script tag with JavaScript
+ * inside that calls focus() on a CSS id.
+ *
+ * @param string $id the CSS id to call focus() on
+ * @return string JavaScript that calls focus() on
+ *     a CSS id
+ */
+function focus($id) {
+    return script("document.getElementById('$id').focus();");
+}
+
+/**
  * Get a string that is a label tag and an input
  * tag.
  *
