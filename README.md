@@ -290,6 +290,16 @@ echo c\olist(array(
 */
 ```
 
+### focus()
+
+Call JavaScript `focus()` on a CSS id:
+
+```php
+echo c\focus('username');
+
+//<script>document.getElementById('username').focus();</script>
+```
+
 ### linput() and dlinput()
 
 `linput()` is for a label and an input:
