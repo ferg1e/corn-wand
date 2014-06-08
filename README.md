@@ -17,6 +17,13 @@ generate documentation with [phpDocumentor](http://phpdoc.org/).
 The [project](https://github.com/al-codepone/corn-wand) is on GitHub.
 The actual source code is in a [single file](https://github.com/al-codepone/corn-wand/blob/master/src/corn-wand.php).
 
+## Tests
+
+All tests are in the [test directory](https://github.com/al-codepone/corn-wand/tree/master/test).
+Each test is a standalone PHP script.
+There is a test for each function; the name of the test script is the function name.
+Some tag functions don't have tests.
+
 ## Installation
 
 Install using composer:
