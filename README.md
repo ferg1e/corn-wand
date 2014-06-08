@@ -12,9 +12,10 @@ generate documentation with [phpDocumentor](http://phpdoc.org/).
 
 **PHP 5.3** or higher
 
-## Code
+## Source Code
 
-<https://github.com/al-codepone/corn-wand>
+The [project](https://github.com/al-codepone/corn-wand) is on GitHub.
+The actual source code is in a [single file](https://github.com/al-codepone/corn-wand/blob/master/src/corn-wand.php).
 
 ## Installation
 
