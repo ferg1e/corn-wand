@@ -1,7 +1,6 @@
 # Corn Wand
 
-Corn Wand is a PHP functional library for generating HTML. The first
-version is still in development. This README is unfinished.
+Corn Wand is a PHP functional library for generating HTML.
 
 ## Documentation
 
