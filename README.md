@@ -30,7 +30,7 @@ Install using composer:
 ```javascript
 {
     "require": {
-        "corn-wand/corn-wand": "dev-master",
+        "corn-wand/corn-wand": "0.5.1",
     }
 }
 ```
