@@ -959,7 +959,6 @@ function dlinput(
     return div(
         $div_attrs,
         linput($label, $input_attrs, $label_attrs));
-            
 }
 
 /**
