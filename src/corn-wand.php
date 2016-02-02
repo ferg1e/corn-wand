@@ -888,6 +888,22 @@ function focus($id) {
 }
 
 /**
+ *
+ */
+function pform() {
+    $args = func_get_args();
+
+    if(is_array($args[0])) {
+        $args[0]['method'] = 'post';
+    }
+    else {
+        array_unshift($args, array('method' => 'post'));
+    }
+
+    return unpack_tag('form', $args);
+}
+
+/**
  * Get a string that is a label tag and an input
  * tag.
  *
