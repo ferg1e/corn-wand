@@ -888,7 +888,8 @@ function focus($id) {
 }
 
 /**
- *
+ * @see c\form() same but tag always has
+ * a 'method' attribute set to 'post'
  */
 function pform() {
     $args = func_get_args();
