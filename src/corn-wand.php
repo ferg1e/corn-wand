@@ -905,6 +905,20 @@ function pform() {
 }
 
 /**
+ * Get a string that is a print_r() value in a
+ * pre tag. This is useful if you want to pretty
+ * print arrays in the browser.
+ *
+ * @param mixed $value the value to be wrapped in
+ *     print_r() and a pre tag.
+ * @return string the wrapped value
+ */
+function prepr($value)
+{
+    return pre(print_r($value, true));
+}
+
+/**
  * Get a string that is a label tag and an input
  * tag.
  *
